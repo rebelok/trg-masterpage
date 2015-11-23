@@ -27,7 +27,7 @@
     "postcss": "^5.0.10",
     "postcss-color-function": "^2.0.0",
     "postcss-nested": "^1.0.0",
-    "postcss-simple-vars": "^1.0.1",
+    "postcss-simple-vars": "^1.1.0",
     "wiredep": "^2.2.2"
   },
   "eslintConfig": {
@@ -42,7 +42,5 @@
       ]
     }
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }

@@ -6,16 +6,18 @@ import del from 'del';
 import {stream as wiredep} from 'wiredep';
 import autoprefixer from 'autoprefixer';
 import colorFunction from 'postcss-color-function';
+import simpleVars from 'postcss-simple-vars';
 import nested from 'postcss-nested';
 import cssnext from 'cssnext';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+const variables = require('./app/scripts/config/variables');
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.css')
     .pipe($.sourcemaps.init())
-    .pipe($.postcss([cssnext(),colorFunction(),nested(),autoprefixer({browsers: ['last 1 version']})]))
+    .pipe($.postcss([simpleVars({variables}),cssnext(),colorFunction(),nested(),autoprefixer({browsers: ['last 1 version']})]))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
