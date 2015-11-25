@@ -6,6 +6,13 @@ $(function (){
   });
 
   $('.trg-menu__label').click(function(){
-    $(this).parent().toggleClass('trg-menu__submenu-wrapper--expanded')
+    var $submenu = $(this).parent();
+    console.log($submenu,$submenu.hasClass('trg-menu__submenu-wrapper--expanded'));
+    if(!$submenu.hasClass('trg-menu__submenu-wrapper--expanded'))
+    {
+      console.log($submenu.closest('.trg-menu__list'),$submenu.closest('.trg-menu__list').find('.trg-menu__submenu-wrapper--expanded'));
+      $submenu.closest('.trg-menu__list').find('.trg-menu__submenu-wrapper--expanded').removeClass('trg-menu__submenu-wrapper--expanded');
+    }
+    $submenu.toggleClass('trg-menu__submenu-wrapper--expanded')
   });
 });
