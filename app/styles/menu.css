@@ -1,0 +1,85 @@
+.trg-side-menu {
+  left: 0;
+  width: 200px;
+  background-color: #fff;
+  height: 100%;
+}
+
+.trg-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.trg-menu__item {
+  padding: 0;
+}
+
+.trg-menu__submenu-wrapper {
+  border-bottom: 1px solid $borderColor;
+}
+
+.trg-menu__label {
+  padding: 8px 16px;
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  cursor: default;
+
+  &:hover{
+    background: color(hsla(202, 10%, 70%, .2));
+  }
+
+  &::after {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    content: ' ';
+    background: url(/img/chevron_down.svg);
+    transform: rotate(90deg);
+    transition: transform 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+  }
+
+}
+
+.trg-menu__list--submenu {
+  max-height: 0;
+  transition: max-height 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  background: $borderColor;
+}
+
+.trg-menu__submenu-wrapper--expanded {
+
+.trg-menu__label {
+  box-shadow: 0px 3px 5px -2px $shadowColor;
+}
+
+.trg-menu__list--submenu {
+  max-height: 555px;
+}
+
+.trg-menu__label::after {
+  transform: rotate(-90deg);
+}
+
+}
+
+.trg-menu__link {
+  color: #555;
+  text-decoration: none;
+  padding: 4px 4px 8px 24px;
+  line-height: 24px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.trg-menu__link:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+

@@ -16,9 +16,17 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="styles/grid.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/grid.css">
+  <link rel="stylesheet" href="styles/buttons.css">
+  <link rel="stylesheet" href="styles/controls.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/footer.css">
+
+  <!-- endbuild -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Lato" rel="stylesheet" type="text/css">
 </head>
 <body class="hide-side-menu">
@@ -26,13 +34,105 @@
     <div class="container-fluid h100">
         <div class="row middle-xs h100">
             <div class="col-xs-1">
-                <button class="trg-menu-button">
+                <button class="trg-button trg-menu-button">
                     <svg style="width:24px;height:24px" viewBox="0 0 24 24">
                         <path fill="#ffffff" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
                     </svg>
                     <span class="trg-menu-button__text">Menu</span>
                 </button>
             </div>
+          <div class="col-xs row end-xs">
+            <div class="trg-facility">
+              <div class="row"><label for="btn-facility" class="trg-label trg-facility__label">Facility</label></div>
+              <div class="row"><button id="btn-facility" class="trg-button trg-facility__button trg-button--type-menu js-btn-facility">TRG-OK-WM-ERC-TV</button></div>
+              <div class="trg-facility__menu">
+                <div class="trg-facility__menu-header">
+
+                </div>
+                <ul class="trg-menu__list">
+                  <li class="trg-menu__item">
+                    <div class="trg-menu__submenu-wrapper">
+                      <span class="trg-menu__label">Administration</span>
+                      <ul class="trg-menu__list trg-menu__list--submenu">
+                        <li class="trg-menu__item"><a href="#" class="trg-menu__link">Administration</a></li>
+                        <li class="trg-menu__item"><a href="#" class="trg-menu__link">Messages</a></li>
+                        <li class="trg-menu__item"><a href="#" class="trg-menu__link">Companies</a></li>
+                        <li class="trg-menu__item"><a href="#" class="trg-menu__link">Text Management</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="trg-menu__item">
+                    <div class="trg-menu__submenu-wrapper"><span class="trg-menu__label">HEAD Oficce</span>
+                      <ul class="trg-menu__list trg-menu__list--submenu">
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Manage Manifests</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Manage Make & Model Names</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Manage Manifests</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Manage Manifests</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Manage Manifests</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="trg-menu__item">
+                    <div class="trg-menu__submenu-wrapper"><span class="trg-menu__label">Transportation</span>
+                      <ul class="trg-menu__list trg-menu__list--submenu">
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Receiving</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Receiving</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Receiving</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Receiving</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Receiving</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="trg-menu__item">
+                    <div class="trg-menu__submenu-wrapper"><span class="trg-menu__label">Facility</span>
+                      <ul class="trg-menu__list trg-menu__list--submenu">
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="trg-menu__item">
+                    <div class="trg-menu__submenu-wrapper"><span class="trg-menu__label">B2b</span>
+                      <ul class="trg-menu__list trg-menu__list--submenu">
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="trg-menu__item">
+                    <div class="trg-menu__submenu-wrapper"><span class="trg-menu__label">b2c</span>
+                      <ul class="trg-menu__list trg-menu__list--submenu">
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">MSI</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="trg-menu__item">
+                    <div class="trg-menu__submenu-wrapper"><span class="trg-menu__label">Reports</span>
+                      <ul class="trg-menu__list trg-menu__list--submenu">
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Report builder</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Report builder</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Report builder</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Report builder</a></li>
+                        <li class="trg-menu__item"><a href="" class="trg-menu__link">Report builder</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
         </div>
     </div>
 </header>
@@ -123,90 +223,118 @@
 <section class="trg-main-content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs">
+         <div class="col-xs-10 col-xs-offset-1">
+           <h2 class="trg-page__title">Some important page</h2>
+         </div>
+        </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+        <p class="trg-page__description">This is very important page where you can whatever you want..</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div class="trg-panel">
 
-                We all have heroes of our chosen craft. These are people we deeply admire, because their work moves us,
-                and
-                challenges
-                us to be better at our own. They are unmistakable because their voice comes through loud and clear in
-                their
-                work.
-                However, it’s tempting to fall prey to the notion that these remarkable few people emerged from the womb
-                ready
-                and
-                able to produce brilliance.
-                Unquestionably, there are outliers among us, but there is also a fairly identifiable path that many of
-                the most
-                resonant artists, writers, and even leaders have walked on their journey to greatness. While we often
-                believe
-                that
-                mastery and success are singular events, they typically arrive in layers. These layers often take the
-                form of
-                four
-                phases that we pass through as we develop a unique, resonant voice.
+            // turn on (returns overlay element)
+            var overlayEl = mui.overlay('on');
 
-                Your voice is how you’re recognized by others. It’s the tone your collective body of work takes, and it
-                speaks
-                to your
-                values and the unique perspective and skill you bring to the work. However, this individual perspective
-                is often
-                forged over time as you follow the inspiration of your influences, engage in intentional practice, and
-                commit to
-                leaps
-                of intuition. As Virginia Woolf noted, “Masterpieces are not single and solitary births; they are the
-                outcome of
-                many
-                years of thinking in common, of thinking by the body of people, so that the experience of the mass is
-                behind the
-                single voice.” Your voice is the confluence of inspiration, dedicated practice, and strategic risk.
+            // set overlay options
+            var options = {
+            'keyboard': true, // teardown when <esc> key is pressed (default: true)
+            'static': false, // maintain overlay when clicked (default: false)
+            'onclose': function() {} // execute function when overlay is closed
+            };
+            mui.overlay('on', options);
 
-                Your voice is the confluence of inspiration, dedicated practice, and strategic risk.
-                The phases you pass through on this journey of developing your voice are not discrete, and there are
-                always
-                exceptions, but these are tendencies that we can find in the lives of many artists, and can also
-                leverage in
-                order to
-                help on our own journey of growth.
+            // initialize with child element
+            var childEl = document.createElement('div');
+            mui.overlay('on', childEl);
 
-                1. Discovery Phase
-                In a now widely-circulated interview with Public Radio International, This American Life host Ira Glass
-                remarked
-                “What
-                nobody tells people who are beginners—and I really wish someone had told this to me—is that all of us
-                who do
-                creative
-                work, we get into it because we have good taste. But there is this gap. For the first couple of years
-                you make
-                stuff,
-                and it’s just not that good. It’s trying to be good, it has potential, but it’s not.”
+            // options and child element
+            mui.overlay('on', options, childEl);
 
+            // teardown (automatically detaches children)
+            mui.overlay('off'); // turn on (returns overlay element)
+            var overlayEl = mui.overlay('on');
 
-                Glass continued, “But your taste, the thing that got you into the game, is still killer. And your taste
-                is why
-                your
-                work disappoints you. A lot of people never get past this phase. They quit. Most people I know who do
-                interesting,
-                creative work went through years of this.”
+            // set overlay options
+            var options = {
+            'keyboard': true, // teardown when <esc> key is pressed (default: true)
+              'static': false, // maintain overlay when clicked (default: false)
+              'onclose': function() {} // execute function when overlay is closed
+              };
+              mui.overlay('on', options);
 
-                That initial moment of intrigue, when a seed is planted in your mind about what is possible, is what I
-                call
-                Discovery
-                Phase. It’s when you suddenly become fascinated with an idea or a new direction for your work, but you
-                don’t yet
-                have
-                a clear path forward. In this phase, it’s important to identify the small, obtainable skills that could
-                become
-                the
-                building blocks of growth.
+              // initialize with child element
+              var childEl = document.createElement('div');
+              mui.overlay('on', childEl);
 
-                A few questions that you might ask during Discovery Phase:
+              // options and child element
+              mui.overlay('on', options, childEl);
 
-                What new ideas or skills are obsessing me right now?
-                Where is my curiosity leading me next?
-                Who are the handful “best in class” practitioners of this particular skill or craft, and what can I
-                learn from
-                them?
-            </div>
+              // teardown (automatically detaches children)
+              mui.overlay('off'); // turn on (returns overlay element)
+              var overlayEl = mui.overlay('on');
+
+              // set overlay options
+              var options = {
+              'keyboard': true, // teardown when <esc> key is pressed (default: true)
+                'static': false, // maintain overlay when clicked (default: false)
+                'onclose': function() {} // execute function when overlay is closed
+                };
+                mui.overlay('on', options);
+
+                // initialize with child element
+                var childEl = document.createElement('div');
+                mui.overlay('on', childEl);
+
+                // options and child element
+                mui.overlay('on', options, childEl);
+
+                // teardown (automatically detaches children)
+                mui.overlay('off'); // turn on (returns overlay element)
+                var overlayEl = mui.overlay('on');
+
+                // set overlay options
+                var options = {
+                'keyboard': true, // teardown when <esc> key is pressed (default: true)
+                  'static': false, // maintain overlay when clicked (default: false)
+                  'onclose': function() {} // execute function when overlay is closed
+                  };
+                  mui.overlay('on', options);
+
+                  // initialize with child element
+                  var childEl = document.createElement('div');
+                  mui.overlay('on', childEl);
+
+                  // options and child element
+                  mui.overlay('on', options, childEl);
+
+                  // teardown (automatically detaches children)
+                  mui.overlay('off'); // turn on (returns overlay element)
+                  var overlayEl = mui.overlay('on');
+
+                  // set overlay options
+                  var options = {
+                  'keyboard': true, // teardown when <esc> key is pressed (default: true)
+                    'static': false, // maintain overlay when clicked (default: false)
+                    'onclose': function() {} // execute function when overlay is closed
+                    };
+                    mui.overlay('on', options);
+
+                    // initialize with child element
+                    var childEl = document.createElement('div');
+                    mui.overlay('on', childEl);
+
+                    // options and child element
+                    mui.overlay('on', options, childEl);
+
+                    // teardown (automatically detaches children)
+                    mui.overlay('off');
+          </div>
+        </div>
+
         </div>
     </div>
 </section>

@@ -1,0 +1,36 @@
+.trg-footer {
+  background: color(hsla(202, 20%, 90%, 1));
+  height: 100px;
+  color: color(hsla(202, 20%, 30%, 1));
+}
+
+
+.trg-contacts {
+  display: table;
+  padding:0;
+}
+
+.trg-contact {
+  display: table-row;
+  position: relative;
+}
+.trg-contact__icon{
+  position: absolute;
+  width:20px;
+  height:20px;
+  left:0;
+  top:50%;
+  transform: translate3d(0,-50%,0);
+}
+.trg-contact__label,
+.trg-contact__phone {
+  position: relative;
+  display: table-cell;
+  line-height: 24px;
+  text-align: left;
+}
+
+.trg-contact__label {
+  padding: 0 16px 0 20px;
+
+}

@@ -1,0 +1,51 @@
+
+.trg-header, .trg-side-menu {
+  position: fixed;
+  top: 0;
+  transition: left .2s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+}
+
+.trg-side-menu--state-active {
+  transition: left .2s cubic-bezier(0.55, 0, 0.1, 1), box-shadow .2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.trg-header {
+  right: 0;
+  left: 200px;
+  height: 64px;
+  background: $mainColor;
+}
+
+.trg-main-content, .trg-footer {
+  margin-left: 200px;
+  transition: margin-left .2s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.trg-main-content {
+  min-height: 100%;
+  overflow-x: hidden;
+  margin-bottom: -100px;
+  padding-bottom: 100px;
+  padding-top: 64px;
+}
+
+
+
+.hide-side-menu {
+
+.trg-header {
+  left: 0;
+}
+
+.trg-side-menu {
+  left: -200px;
+}
+
+.trg-main-content,
+.trg-footer {
+  margin-left: 0;
+}
+
+}
