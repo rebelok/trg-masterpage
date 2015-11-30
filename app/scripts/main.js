@@ -50,3 +50,16 @@ $(function (){
       $doc.on('click', closeFacilityMenu);
   });
 });
+
+$(function(){
+    function getType(status){
+        switch (status){
+            case 1: return 4;
+            case 2: return 2;
+            case 3: return 3;
+        }
+    }
+
+    var uiNotifications = $('.js-ui-notifications').data('notifications');
+    uiNotifications.forEach(function(notification, index){setTimeout(function(){notie.alert(getType(notification.Status),notification.Message, notification.Duration);},index*1500)});
+});
