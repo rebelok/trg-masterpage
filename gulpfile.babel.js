@@ -47,10 +47,10 @@ gulp.task('html', ['styles'], () => {
   return gulp.src('app/*.html')
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
+    //.pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
-    .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
+    //.pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('dist'));
 });
 
@@ -132,6 +132,39 @@ gulp.task('serve:test', () => {
 });
 
 // inject bower components
+gulp.task('inject', function () {
+
+  var injectStyles = gulp.src([
+      // selects all css files from the .tmp dir
+      paths.tmp + '/**/*.css'
+    ], { read: false }
+  );
+
+  var injectScripts = gulp.src([
+    // selects all js files from .tmp dir
+    paths.tmp + '/**/*.js',
+    // but ignores test files
+    '!' + paths.src + '/**/*.test.js'
+    // then uses the gulp-angular-filesort plugin
+    // to order the file injection
+  ]).pipe($.angularFilesort()
+    .on('error', $.util.log));
+  // tell wiredep where your bower_components are
+  var wiredepOptions = {
+    directory: 'bower_components'
+  };
+
+  return gulp.src(paths.src + '/*.html')
+    .pipe($.inject(injectStyles, injectOptions))
+    .pipe($.inject(injectScripts, injectOptions))
+    .pipe(wiredep(wiredepOptions))
+    // write the injections to the .tmp/index.html file
+    .pipe(gulp.dest(paths.tmp));
+  // so that src/index.html file isn't modified
+  // with every commit by automatic injects
+
+});
+
 gulp.task('wiredep', () => {
   gulp.src('app/*.html')
     .pipe(wiredep({
@@ -140,7 +173,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

@@ -1,6 +1,6 @@
 //menu
 $(function (){
-
+ $('button').click(function(e){e.preventDefault();});
   function isNodeInRoot(node, root) {
     while (node) {
       if (node === root) {
